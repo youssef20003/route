@@ -1,0 +1,49 @@
+section {
+    background-color: white;
+    color: var(--secondry);
+    padding: 50px 0;
+
+}
+
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.img-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+img {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+}
+
+
+.hover {
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(41, 177, 151, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.img-wrapper:hover .hover {
+    opacity: 1;
+}
+
+
+.logo-container::before,
+.logo-container::after {
+    background-color: var(--secondry);
+}

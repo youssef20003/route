@@ -1,0 +1,28 @@
+section {
+    background-color: white;
+    color: var(--secondry);
+    padding: 50px 0;
+
+}
+
+
+
+button {
+    background-color: var(--primary);
+    color: white;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+
+}
+
+.logo-container::before,
+.logo-container::after {
+    background-color: var(--secondry);
+}

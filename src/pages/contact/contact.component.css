@@ -15,10 +15,12 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.form{
+
+.form {
     display: block;
     margin: 0 auto;
     width: 70%;
+    
 
 }
 
@@ -26,3 +28,18 @@ button {
 .logo-container::after {
     background-color: var(--secondry);
 }
+
+
+
+label {
+    color: var(--primary);
+}
+
+label{
+    bottom: 0;
+    
+}
+
+
+
+

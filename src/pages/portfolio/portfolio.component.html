@@ -7,57 +7,21 @@
             <div class="mb-2 logo-container">
                 <i class="fa-solid fa-star logo"></i>
             </div>
-            <div class="row row-cols-3 row-gap-4 ">
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
+            <div class="row row-cols-lg-3 row-cols-md-2  row-cols-sm-1 row-gap-4 ">
+                @for(img of images ; track $index){
+                    <div class="col ">
+                        <div class=" img-wrapper" >
+                            <div class="hover ">
+                                <i class="text-white fa-solid fa-plus fa-6x"></i>
+                            </div>
+                            <img src={{img}} alt="">
                         </div>
-                        <img src="./imgs/poert1.png" alt="">
                     </div>
-                </div>
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
-                        </div>
-                        <img src="./imgs/port2.png" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
-                        </div>
-                        <img src="./imgs/port3.png" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
-                        </div>
-                        <img src="./imgs/poert1.png" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
-                        </div>
-                        <img src="./imgs/port2.png" alt="">
-                    </div>
-                </div>
-                <div class="col">
-                    <div class=" img-wrapper">
-                        <div class="hover ">
-                            <i class="text-white fa-solid fa-plus fa-6x"></i>
-                        </div>
-                        <img src="./imgs/port3.png" alt="">
-                    </div>
-                </div>
-                
+                    } 
             </div>
         </div>
-    </div>
-</section>
+    </div> 
+</section> 
+
+
+

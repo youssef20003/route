@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 import { dir } from 'console';
+declare var bootstrap: any;
 @Component({
   selector: 'app-portfolio',
   imports: [],
@@ -16,13 +17,12 @@ export class PortfolioComponent {
     './imgs/port2.png',
     './imgs/port3.png'
   ];
-  @Output() imgsrc: EventEmitter<string> = new EventEmitter()
 
-
-  sendsrc(src: string): void {
-    console.log(src + 'from port comp');
-
-    this.imgsrc.emit(src)
+  selectedImage: string = '';
+  openModal(img: string) {
+    this.selectedImage = img;
+    let modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    modal.show();
   }
 
 }

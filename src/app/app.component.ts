@@ -13,5 +13,4 @@ import { PortfolioComponent } from "../pages/portfolio/portfolio.component";
 })
 export class AppComponent {
   title = 'ng1';
-
 }

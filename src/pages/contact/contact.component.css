@@ -20,7 +20,7 @@ button {
     display: block;
     margin: 0 auto;
     width: 70%;
-    
+
 
 }
 
@@ -33,13 +33,28 @@ button {
 
 label {
     color: var(--primary);
+    z-index: -2;
+    transform: translateY(-40px);
 }
 
-label{
-    bottom: 0;
-    
+input{
+    z-index: 2;
 }
 
 
+input.ng-valid ~ label {
+    transform: translatey(-90px);
+    transition: transform 0.3s ease-in-out;
+}
 
 
+input.ng-invalid ~ label {
+
+    transform: translatey(-40px);
+    transition: transform 0.3s ease-in-out;
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}

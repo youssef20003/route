@@ -11,7 +11,7 @@
                 @for(img of images ; track $index){
                     <div class="col ">
                         <div class=" img-wrapper" >
-                            <div class="hover ">
+                            <div class="hover" (click)="sendsrc(img)" >
                                 <i class="text-white fa-solid fa-plus fa-6x"></i>
                             </div>
                             <img src={{img}} alt="">

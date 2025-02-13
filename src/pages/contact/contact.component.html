@@ -11,25 +11,37 @@
             </div>
 
             <div class="form">
-                <form class="ng-valid ng-touched ng-dirty">
+                <form #form="ngForm">
+                    <div class="mb-3 element">
+                        <input type="text" class="form-control border-0 border-bottom py-3 position-relative"
+                            placeholder="Username" id="username" name="username" [(ngModel)]="user.username" required>
+                        <label for="username" class="form-label">User Name</label>
+                    </div>
 
                     <div class="mb-3 element">
-                        <label for="username" class="form-label">User Name</label>
-                        <input type="text" class="form-control border-0 border-bottom py-3 position-relative ng-valid ng-invalid "  placeholder="Username" id="username">
+                        
+                        <input type="number" class="form-control border-0 border-bottom py-3 position-relative"
+                            placeholder="User Age" id="userage" name="userage" [(ngModel)]="user.age" required>
+                            <label for="userage" class="form-label">User Age</label>
                     </div>
+
                     <div class="mb-3 element">
-                        <label for="userage" class="form-label">user age</label>
-                        <input type="text" class="form-control border-0 border-bottom py-3 position-relative  " placeholder="userage" id="userage" >
+                        
+                        <input type="email" class="form-control border-0 border-bottom py-3 position-relative"
+                            placeholder="User Email" id="useremail" name="useremail" [(ngModel)]="user.email" required>
+                            <label for="useremail" class="form-label">User Email</label>
                     </div>
+
                     <div class="mb-3 element">
-                        <label for="useremail" class="form-label">user email</label>
-                        <input type="email" class="form-control border-0 border-bottom py-3 position-relative  " placeholder="useremail" id="useremail" >
+                        
+                        <input type="password" class="form-control border-0 border-bottom py-3 position-relative"
+                            placeholder="User Password" id="userpassword" name="userpassword"
+                            [(ngModel)]="user.password" required>
+                            <label for="userpassword" class="form-label">User Password</label>
                     </div>
-                    <div class="mb-3 element">
-                        <label for="userpassword" class="form-label">user password</label>
-                        <input type="text" class="form-control border-0 border-bottom py-3 position-relative  " placeholder="userpassword" id="userpassword" >
-                    </div>
-                    <button type="submit" class="btn mt-3 ">send message</button>
+
+
+                    <button type="submit" class="btn mt-3" [disabled]="form.invalid">Send Message</button>
                 </form>
 
             </div>

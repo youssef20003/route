@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, Directive } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { dir } from 'console';
 @Component({
   selector: 'app-portfolio',
@@ -16,5 +16,13 @@ export class PortfolioComponent {
     './imgs/port2.png',
     './imgs/port3.png'
   ];
+  @Output() imgsrc: EventEmitter<string> = new EventEmitter()
+
+
+  sendsrc(src: string): void {
+    console.log(src + 'from port comp');
+
+    this.imgsrc.emit(src)
+  }
 
 }
